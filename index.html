@@ -52,6 +52,7 @@
         <p>As informações deste site foram pesquisadas exclusivamente com expecialistas responsaveis</p>
         <p class="artigo-autor">Por: Nicilly Franchin</p>
         <button>🎨 <span>0</span></button>
+        <button>❌ <span>0</span></button>
 
         </div>
         
@@ -61,13 +62,15 @@
 
 </body>
 <script>
-const botao = document.querySelector("botão");
-botao.addEventListener("clique", botaoClick);
-function botaoClicado() {
+const botoes = document.querySelectorAll("main button");
+botoes.forEach(function(botao){
+botoes.addEventListener("clique", botaoClick);
+function botoesClicado() {
 console.log("fui clicado");
-let texto = botao.querySelector("span");
+let texto = botoes.querySelector("span");
 texto.textContent++;
 }
+});
 </script>
 
 
